@@ -1,0 +1,275 @@
+* {
+    font-family: "Noto Sans JP", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+}
+
+body {
+    background-color: #ebedee;
+}
+
+td {
+    height: 5px;
+    padding: 0.1px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+td:first-child {
+    width: 100px;
+}
+td:nth-child(2) {
+    width: 200px;
+}
+
+td:last-child {
+    width: 300px;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.bg-theme {
+    background-color: #68dff0;
+}
+
+.bg-theme-time {
+    background: #ff6c60;
+}
+
+/* da.description.length >= 25 ? (
+            <ShowModal
+              buttonLabel={da.description.substr(0, 25) + '...'}
+              data={da.description}
+            />
+          ) : (
+            da.description
+          ), */
+
+ol.gradient-list > li,
+ol.gradient-list > li::before {
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+        0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+ol.gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+}
+ol.gradient-list > li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+}
+ol.gradient-list > li::before,
+ol.gradient-list > li::after {
+    background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: "";
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+}
+ol.gradient-list > li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1.5em/1 "Montserrat";
+    justify-content: flex-end;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+}
+ol.gradient-list > li:nth-child(10n + 1):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.2) 0%,
+        rgba(253, 220, 50, 0.2) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 2):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.4) 0%,
+        rgba(253, 220, 50, 0.4) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 3):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.6) 0%,
+        rgba(253, 220, 50, 0.6) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 4):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.8) 0%,
+        rgba(253, 220, 50, 0.8) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 5):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 1) 0%,
+        rgba(253, 220, 50, 1) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 6):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.8) 0%,
+        rgba(253, 220, 50, 0.8) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 7):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.6) 0%,
+        rgba(253, 220, 50, 0.6) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 8):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.4) 0%,
+        rgba(253, 220, 50, 0.4) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 9):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0.2) 0%,
+        rgba(253, 220, 50, 0.2) 100%
+    );
+}
+ol.gradient-list > li:nth-child(10n + 10):before {
+    background: linear-gradient(
+        135deg,
+        rgba(162, 237, 86, 0) 0%,
+        rgba(253, 220, 50, 0) 100%
+    );
+}
+ol.gradient-list > li + li {
+    margin-top: 2rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+li div {
+    display: inline-block;
+}
+
+.action-buttons {
+    position: absolute;
+    right: -7px;
+}
+
+.todo-todo-name,
+.todo-todo-description {
+    color: #28a745;
+    text-decoration: line-through;
+}
+.todo-todo-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Bubble Float Bottom */
+.hvr-bubble-float-bottom {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-bubble-float-bottom:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: calc(50% - 10px);
+    bottom: 0;
+    /* border-style: solid; */
+    border-width: 10px 10px 0 10px;
+    border-color: #e1e1e1 transparent transparent transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-bubble-float-bottom:hover,
+.hvr-bubble-float-bottom:focus,
+.hvr-bubble-float-bottom:active {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.hvr-bubble-float-bottom:hover:before,
+.hvr-bubble-float-bottom:focus:before,
+.hvr-bubble-float-bottom:active:before {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+
+li.restored-item {
+    animation: 
+        /*make sure to open space up before bringing the item into position*/
+        openspace .3s ease forwards, 
+        restored-item-animation .3s .3s cubic-bezier(0,.8,.32,1.07) forwards;
+}
+
+@keyframes openspace {
+    to {
+        height: auto;
+    }
+}
+
+@keyframes restored-item-animation {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.navbar  {
+    background-color: #4c9ec7;
+}
